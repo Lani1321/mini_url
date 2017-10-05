@@ -22,9 +22,6 @@ class LinksController < ApplicationController
         @link.clicks += 1
         @link.save
         redirect_to shortened_path(@link.short_url)
-      else
-        flash[:error] = "Check the error below:"
-        render 'index'
       end
     else
 
