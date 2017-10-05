@@ -1,24 +1,32 @@
-<%= form_for(link) do |f| %>
-  <% if link.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(link.errors.count, "error") %> prohibited this link from being saved:</h2>
+<%= form_for(@link, :html=>{:class=> "form-inline"}) do |f| %>
+  <div class="input-group">
+    <% if @link.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@link.errors.count, "error") %> prohibited this @link from being saved:</h2>
 
-      <ul>
-      <% link.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @link.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
-  <% end %>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :full_url %>
-    <%= f.text_field :full_url %>
-  </div>
+    <div class="field">
+      <div class="input-group"> 
+        <%= f.text_field :full_url, placeholder: "Paste your link here", class: 'form-control', size: "50" %>
+      
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+        <div class="input-group-btn">
+          <%= f.submit "Shorten", class: "btn btn-danger" %>
+        </div>
+      </div>
+    </div>
 <% end %>
+</div>
 
+<p id="notice"><%= notice %></p>
+<% shortened_url = "https://mini-u.herokuapp.com/#{@link.short_url}" %>
+<%= link_to shortened_url, shortened_url, target: "blank" %>
 
