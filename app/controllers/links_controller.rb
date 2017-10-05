@@ -21,13 +21,15 @@ class LinksController < ApplicationController
       if @link.save
         @link.clicks += 1
         @link.save
-        redirect_to shortened_path(@link.short_url)
+        flash[:notice] = "Here is your shortened link:"
+        render :index
       end
     else
 
       # TODO: should a click be added here?
       flash[:notice] = "A short link already exsists for this URL, but here it is:"
-      redirect_to shortened_path(@link.find_duplicate.short_url)
+      render :index
+      # redirect_to shortened_path(@link.find_duplicate.short_url)
     end
   end
 

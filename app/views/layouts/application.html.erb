@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>MiniUrl</title>
-    <%= csrf_meta_tags %>
+<html lang="en">
+<head>
+  <title>Mini URL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<div class="jumbotron text-center">
+  <style>
+  .jumbotron { 
+      background-color: #f6ece5; /* Cream */
+      color: #D67C73;
+      height: 400px;
+  }
+  </style>
+  <div class="header-title">
+    <h1>Mini URL</h1> 
+    <p>We shrink links</p> 
+  </div>
+  <br>
+  <br>
+  <br>
+  <%= yield %>
+</div>
 
-  <body>
-    <%= yield %>
-  </body>
+</body>
 </html>
