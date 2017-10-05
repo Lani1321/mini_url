@@ -1,0 +1,9 @@
+<h2>Your original URL was: </h2>
+<% "#{@link.full_url}" %>
+
+<p id="notice"><%= notice %></p>
+
+
+<% shortened_url = "http://localhost:3000/#{@link.short_url}" %>
+
+<%= link_to shortened_url, shortened_url, target: "blank" %>
