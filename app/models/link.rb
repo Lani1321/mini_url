@@ -8,6 +8,10 @@ class Link < ApplicationRecord
     self.short_url = SecureRandom.urlsafe_base64(6)
   end
 
+  def find_duplicate
+    Link.find_by_sanitized_url(self.sanitized_url)
+  end
+  
   def sanitize
     self.full_url.strip!
 
