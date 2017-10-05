@@ -3,6 +3,7 @@ class LinksController < ApplicationController
   
   def index
     @link = Link.new
+    @links = Link.order(clicks: :desc).first(100)
   end
 
   def show
