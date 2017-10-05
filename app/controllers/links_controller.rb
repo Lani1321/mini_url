@@ -27,7 +27,7 @@ class LinksController < ApplicationController
     else
 
       # TODO: should a click be added here?
-      flash[:notice] = "A short link already exsists for this URL, but here it is:"
+      flash[:notice] = "A short link already exsists for this URL, search the 'Top 100' table below:"
       render :index
       # redirect_to shortened_path(@link.find_duplicate.short_url)
     end

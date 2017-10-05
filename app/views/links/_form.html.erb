@@ -26,6 +26,25 @@
 <% end %>
 </div>
 
-<p id="notice"><%= notice %></p>
+ <% if notice %>
+    <div id="notice_wrapper">
+        <p class="notice"><%= notice %></p>
+    </div>
+  <% elsif alert %>
+      <div id="notice_wrapper">
+          <p class="alert"><%= alert %></p>    
+      </div>
+  <% end %>
+<!-- <p id="notice"><%= notice %></p> -->
 <% shortened_url = "https://mini-u.herokuapp.com/#{@link.short_url}" %>
-<%= link_to shortened_url, shortened_url, target: "blank" %>
+
+
+<script>
+  $(document).ready(function() {
+      setTimeout(function() {
+          $('#notice_wrapper').fadeOut("slow", function() {
+              $(this).remove();
+          });
+      }, 4500);
+  });
+</script>
