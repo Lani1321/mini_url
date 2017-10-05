@@ -7,7 +7,6 @@ class LinksController < ApplicationController
   end
 
   def show
-    # binding.pry
     @link.clicks += 1
     @link.save
     redirect_to @link.sanitized_url
@@ -31,7 +30,6 @@ class LinksController < ApplicationController
       # TODO: should a click be added here?
       flash[:notice] = "A short link already exsists for this URL, search the 'Top 100' table below:"
       render :index
-      # redirect_to root
       # redirect_to shortened_path(@link.find_duplicate.short_url)
     end
   end
