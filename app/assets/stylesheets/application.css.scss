@@ -16,6 +16,38 @@
   margin-right: 10%;
 }
 
-td, th {
-  padding-right: 4%;
+table#top100 {
+  border-spacing: 100px;
+}
+
+table#top100 td:nth-child(2) {
+  padding-right: 10px;
+}
+
+table#top100 td:nth-child(3) {
+  padding-left: 20px;
+}
+
+table#top100 tr:nth-child(1) {
+  padding-bottom: 10px;
+}
+
+table#top100 td, th {
+    padding: 10px;
+}
+
+#notice_wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  background: rgba(135, 215, 211, 0.85);
+    .notice, .alert {
+      padding: 2.5rem 0;
+      text-align: center;
+      margin: 0;
+      font-size: 1.25rem;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+    }
 }
