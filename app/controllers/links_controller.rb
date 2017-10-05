@@ -7,7 +7,7 @@ class LinksController < ApplicationController
   end
 
   def show
-    # TODO: move into private method
+    # binding.pry
     @link.clicks += 1
     @link.save
     redirect_to @link.sanitized_url
