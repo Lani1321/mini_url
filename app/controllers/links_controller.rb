@@ -24,6 +24,9 @@ class LinksController < ApplicationController
         # TODO: user should be able to see the link and copy it right away
         # flash[:notice] = "Here is your shortened link:"
         # render :index
+      else
+        flash[:notice] = "There was an error with your link, read the message below:"
+        render :index
       end
     else
 

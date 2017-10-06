@@ -1,39 +1,13 @@
 .jumbotron {
     background-color: #f6ece5; /* Cream */
     color: #D67C73;
-    height: 400px;
+    height: 440px;
     text-align: center;
-
 }
 
 .leaderboard-title {
   text-align: center;
-  color: #D67C73;
-}
-
-.leaderboard-table {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-table#top100 {
-  border-spacing: 100px;
-}
-
-table#top100 td:nth-child(2) {
-  padding-right: 10px;
-}
-
-table#top100 td:nth-child(3) {
-  padding-left: 20px;
-}
-
-table#top100 tr:nth-child(1) {
-  padding-bottom: 10px;
-}
-
-table#top100 td, th {
-  padding: 10px;
+  color: #424642;
 }
 
 #notice_wrapper {
@@ -41,7 +15,7 @@ table#top100 td, th {
   top: 0;
   width: 100%;
   z-index: 10000;
-  background: rgba(135, 215, 211, 0.85);
+  background: #58CC63;
     .notice, .alert {
       padding: 2.5rem 0;
       text-align: center;
@@ -50,4 +24,20 @@ table#top100 td, th {
       color: #FFFFFF;
       letter-spacing: 1px;
     }
+}
+
+.shorty{
+  margin-top: -105px;
+  text-align: center
+}
+
+img {
+  height: 180px;
+  margin-top: 34px;
+}
+
+.header-title {
+  margin-bottom: -40px;
+  margin-top: 50px;
+  color: #424642;
 }

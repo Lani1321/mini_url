@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-
 <% shortened_url = "https://mini-u.herokuapp.com/#{@link.short_url}" %>
 
-<%= link_to shortened_url, shortened_url, target: "blank" %>
+<div class="shorty">
+  <h2>Here's your shorty url: <%= link_to shortened_url, shortened_url, target: "blank" %> </h2>
+</div>
+

@@ -2,13 +2,10 @@
   <div class="input-group">
     <% if @link.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@link.errors.count, "error") %> prohibited this @link from being saved:</h2>
-
-        <ul>
+        <p><%= pluralize(@link.errors.count, "error") %> prohibited this link from being saved:
         <% @link.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <%= message %></p>
         <% end %>
-        </ul>
       </div>
     </div>
     <% end %>
@@ -16,10 +13,8 @@
     <div class="field">
       <div class="input-group"> 
         <%= f.text_field :full_url, placeholder: "Paste your link here", class: 'form-control', size: "50" %>
-      
-
         <div class="input-group-btn">
-          <%= f.submit "Shorten", class: "btn btn-danger" %>
+          <%= f.submit "Shrink", class: "btn btn-success" %>
         </div>
       </div>
     </div>
@@ -28,14 +23,14 @@
 
  <% if notice %>
     <div id="notice_wrapper">
-        <p class="notice"><%= notice %></p>
+      <p class="notice"><%= notice %></p>
     </div>
   <% elsif alert %>
       <div id="notice_wrapper">
-          <p class="alert"><%= alert %></p>    
+        <p class="alert"><%= alert %></p>    
       </div>
   <% end %>
-<!-- <p id="notice"><%= notice %></p> -->
+
 <% shortened_url = "https://mini-u.herokuapp.com/#{@link.short_url}" %>
 
 
