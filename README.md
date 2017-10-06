@@ -2,6 +2,10 @@
 
 Ever get annoyed of copying and pasting a link with a ton of characters in it?  Fear no more!  Shorty is a web application that creates shorter URLs.  Simply paste(or type out) your link, and voila! A deployed version can be found [here](https://mini-u.herokuapp.com/).
 
+## Dependencies
+- Ruby 2.2.5
+- Postgres
+- Rails 5
 
 ## Installation
 - Clone this respository
