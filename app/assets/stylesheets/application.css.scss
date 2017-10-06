@@ -28,8 +28,8 @@
 }
 
 .shorty{
-  margin-top: -120px;
-  text-align: center
+  margin: 80px;
+  text-align: center;
 }
 
 img {
@@ -50,4 +50,16 @@ img {
 
 .back-btn {
   text-align: center;
+}
+
+.bg-4 { 
+  background-image: image-url('succulents.png');
+  height: 58px;
+  color: black;
+  opacity: 0.7;
+  font-weight: 900;
+}
+
+.container {
+  padding-bottom: 60px;
 }

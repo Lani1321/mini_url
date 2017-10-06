@@ -21,9 +21,8 @@ class LinksController < ApplicationController
         @link.clicks += 1
         @link.save
         redirect_to shortened_path(@link.short_url)
-        # TODO: user should be able to see the link and copy it right away
-        # flash[:notice] = "Here is your shortened link:"
-        # render :index
+        # TODO: Allow the user to see the short link populate on the same page
+
       else
         flash[:notice] = "There was an error with your link, read the message below:"
         render :index
@@ -33,7 +32,6 @@ class LinksController < ApplicationController
       # TODO: should a click be added here?
       flash[:notice] = "A short link already exsists for this URL, search the 'Top 100' table below:"
       render :index
-      # redirect_to shortened_path(@link.find_duplicate.short_url)
     end
   end
 
