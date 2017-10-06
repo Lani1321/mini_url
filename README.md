@@ -1,24 +1,25 @@
-# README
+# Shorty
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ever get annoyed of copying and pasting a link with a ton of characters in it?  Fear no more!  Shorty is a web application that creates shorter URLs.  Simply paste(or type out) your link, and voila! A deployed version can be found [here](https://mini-u.herokuapp.com/).
 
-Things you may want to cover:
 
-* Ruby version
+## Installation
+- Clone this respository
+- Run bundle install
+- Run rake db:create
+- Run rake db:migrate 
+- After you're finished setting that up, open your browser and head to localhost
 
-* System dependencies
+## CONTRIBUTING
 
-* Configuration
+Bug reports and pull requests are welcome. If you see an opportunity for improvement go ahead and use a typical git workflow:
 
-* Database creation
+- Fork this repository
+- Make the change on your fork, with descriptive commits in the standard format
+- Open a Pull Request against this repo
 
-* Database initialization
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-* How to run the test suite
+## LICENSE
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This application is available as open source under the terms of the MIT License.
