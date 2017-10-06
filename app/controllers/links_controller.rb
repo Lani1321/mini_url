@@ -24,6 +24,8 @@ class LinksController < ApplicationController
         # TODO: Allow the user to see the short link populate on the same page
 
       else
+
+        # TODO: Flash messages pop up on reload
         flash[:notice] = "There was an error with your link, read the message below:"
         render :index
       end
