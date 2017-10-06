@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="leaderboard-title">
+    <h1>Top 100</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 leaderboard-table">
+      <table class="table-bordered">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Full URL</th>
+            <th>Short URL</th>
+            <th>Amount Visited</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <% @links.each_with_index do |link, i| %>
+            <% shortened_url = "https://mini-u.herokuapp.com/#{link.short_url}" %>
+            <tr>   
+              <td class="text-center"><%= (i+1) %></td>
+              <td><%= link.full_url %></td>
+              <td><%= link_to shortened_url, shortened_url, target: "blank" %></td>
+              <td class="text-center"><%= link.clicks %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>  
