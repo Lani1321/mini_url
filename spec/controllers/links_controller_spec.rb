@@ -1,5 +1,6 @@
 require 'spec_helper'
-require_relative '../app/controllers/links_controller'
+# require 'rails_helper'
+require_relative '../app/controllers/links'
 # require_relative '../app/models/link'
 
 RSpec.describe "mini_url-LinksTest", :type => :controller do
