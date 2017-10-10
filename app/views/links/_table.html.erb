@@ -19,7 +19,7 @@
           <% @links.each_with_index do |link, i| %>
             <% shortened_url = "https://mini-u.herokuapp.com/#{link.short_url}" %>
             <tr>   
-              <td><%= (i+1) %></td>
+              <td><%= (i+1).ordinalize %></td>
               <td><%= link.full_url %></td>
               <td><%= link_to shortened_url, shortened_url, target: "blank" %></td>
               <td>
