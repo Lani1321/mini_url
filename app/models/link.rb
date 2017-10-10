@@ -5,13 +5,18 @@ class Link < ApplicationRecord
   
   # Assign a short url
   def generate_short_url
-    self.short_url = SecureRandom.urlsafe_base64(6)
+    lower = ('a'..'z').to_a
+    upper = ('A'..'Z').to_a
+    num = (1..9).to_a
+    letters = lower.concat(upper)
+    chars = letters.concat(num)
+    self.short_url = chars.shuffle[0,1].join
   end
 
   def find_duplicate
     Link.find_by_sanitized_url(self.sanitized_url)
   end
-  
+
   def sanitize
     self.full_url.strip!
 
