@@ -5,12 +5,34 @@ class Link < ApplicationRecord
   
   # Assign a short url
   def generate_short_url
+
+    # Generate 3 arrays with lowercase, upper case and nums
     lower = ('a'..'z').to_a
     upper = ('A'..'Z').to_a
-    num = (1..9).to_a
+    num = ('0'..'9').to_a
     letters = lower.concat(upper)
     chars = letters.concat(num)
-    self.short_url = chars.shuffle[0,1].join
+
+    # Get last short_url in db 
+    # If there is none, then start the short_url at 'a'
+    if Link.last == nil
+      last_short_url = "a"
+      short_char = 0
+    else
+
+      # Grab last digit of short_url from last link to account for double digit URLs
+      last_short_url = Link.last.short_url[-1]
+
+      # Add 1 to get the next index in the array and set the new short url
+      short_char = chars.find_index(last_short_url) + 1
+    end
+    link = Link.find_by_short_url(chars[short_char])
+    if link.nil? && short_char <= 61
+      self.short_url = chars[short_char]
+    else
+      shuffled_chars = chars.shuffle[0,2].join
+      self.short_url = shuffled_chars
+    end
   end
 
   def find_duplicate
