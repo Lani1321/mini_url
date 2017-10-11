@@ -20,7 +20,7 @@ class Link < ApplicationRecord
       short_char = 0
     else
 
-      # Grab last digit of short_url from last link to account for double digit URLs
+      # Grab last digit of short_url from last short url to account for double digit URLs
       last_short_url = Link.last.short_url[-1]
 
       # Add 1 to get the next index in the array and set the new short url
