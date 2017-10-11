@@ -5,7 +5,7 @@ class Link < ApplicationRecord
   
   # Assign a short url
   def generate_short_url
-
+    
     # Generate 3 arrays with lowercase, upper case and nums
     lower = ('a'..'z').to_a
     upper = ('A'..'Z').to_a
