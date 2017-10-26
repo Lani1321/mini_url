@@ -1,11 +1,6 @@
 require "rails_helper"
 
 RSpec.describe Link, :type => :model do
-  it "generates a short url" do
-    netflix = Link.create!(full_url: "https://netflix.com")
-
-    expect(netflix.short_url).to eq("h")
-  end
 
   it "sanitizes the url" do 
     netflix = Link.create!(full_url: "https://netflix.com")
